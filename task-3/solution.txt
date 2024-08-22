@@ -1,4 +1,4 @@
-mkdir project_files
+  mkdir project_files
 cd project_files
 mkdir reports logs data
 cd reports
@@ -13,8 +13,8 @@ nano ~/project_files/reports/report1.md
 nano ~/project_files/logs/system.log
 nano ~/project_files/data/data.csv
 cd ~/project_files
-tar -cvf logs_backup.tar logs
-mv logs_backup.tar ~/projects_files
+cd ~/project_files/logs && tar -cf logs_backup.tar --exclude=logs_backup.tar *
+mv ~/project_files/logs/logs_backup.tar ~/project_files
 tar -xvf logs_backup.tar
 find ~ -name "*.md"
 find ~/project_files -name '*.log'
